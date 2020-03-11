@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView text;
 
 
-    private static final String ANS = "answers";
+
 
 
         @Override
@@ -38,14 +38,11 @@ public class MainActivity extends AppCompatActivity {
         };
 
         int[] actionIds = new int[] {
-                R.id.back_btn,
                 R.id.division,
-                R.id.dot_btn,
                 R.id.minus,
                 R.id.equals,
                 R.id.multiply,
                 R.id.plus,
-                R.id.clear,
         };
 
         text =findViewById(R.id.math_operation);

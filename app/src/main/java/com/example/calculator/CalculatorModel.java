@@ -1,6 +1,6 @@
 package com.example.calculator;
 
-
+import com.example.calculator.R;
 
 public class CalculatorModel {
 
@@ -43,7 +43,6 @@ public class CalculatorModel {
                         inputStr.append("0");
                     }
                     break;
-
                 case R.id.btn_1:
                     inputStr.append("1");
                     break;
@@ -82,7 +81,6 @@ public class CalculatorModel {
             state = State.resultShow;
             inputStr.setLength(0);
             switch (actionSelected) {
-
                 case R.id.plus:
                     inputStr.append(firstArg + secondArg);
                     break;
@@ -95,8 +93,6 @@ public class CalculatorModel {
                 case R.id.division:
                     inputStr.append(firstArg / secondArg);
                     break;
-
-
             }
 
         } else if (inputStr.length() > 0 && state == State.firstArgInput) {
@@ -140,18 +136,9 @@ public class CalculatorModel {
                 return '-';
             case R.id.multiply:
                 return '*';
-            case R.id.dot_btn:
-                return '.';
             case R.id.division:
             default:
                 return '/';
-
-
-            case R.id.clear:
-                inputStr.toString();
-                return '0';
-
-
 
         }
     }
@@ -160,13 +147,4 @@ public class CalculatorModel {
         state = State.firstArgInput;
         inputStr.setLength(0);
     }
-
-
 }
-
-
-
-
-
-
-
