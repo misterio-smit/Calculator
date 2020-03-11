@@ -3,7 +3,9 @@ package com.example.calculator;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
 import android.view.View;
+
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -12,7 +14,11 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView text;
 
-    @Override
+
+    private static final String ANS = "answers";
+
+
+        @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -45,6 +51,9 @@ public class MainActivity extends AppCompatActivity {
         text =findViewById(R.id.math_operation);
 
         calculator = new CalculatorModel();
+
+
+
 //  Обработчик кнопок
 
         View.OnClickListener nunberButtonClickListener = new View.OnClickListener() {
