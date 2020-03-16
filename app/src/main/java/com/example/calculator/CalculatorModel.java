@@ -1,6 +1,6 @@
 package com.example.calculator;
 
-import com.example.calculator.R;
+
 
 public class CalculatorModel {
 
@@ -8,6 +8,8 @@ public class CalculatorModel {
     private int secondArg;
 
     private StringBuilder inputStr = new StringBuilder();
+
+
 
     private int actionSelected;
 

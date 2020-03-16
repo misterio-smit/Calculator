@@ -47,8 +47,8 @@
 
             <Button
                 style="@style/ActionButton"
-
-                android:text="" />
+                android:id="@+id/clear"
+                android:text="AC" />
 
             <Button
 
@@ -154,8 +154,8 @@
 
             <Button
                 style="@style/ActionButton"
-
-                android:text=""
+                android:id="@+id/dot_btn"
+                android:text="."
                 />
 
             <Button
@@ -164,9 +164,9 @@
                 android:text="0" />
 
             <Button
-
+                android:id="@+id/back_btn"
                 style="@style/ActionButton"
-                android:text="" />
+                android:text="Back" />
 
             <Button
                 style="@style/ActionButton"
