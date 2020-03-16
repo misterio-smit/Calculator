@@ -34,18 +34,18 @@ public class MainActivity extends AppCompatActivity {
                 R.id.btn_7,
                 R.id.btn_8,
                 R.id.btn_9,
+                R.id.dot_btn,
 
         };
 
         int[] actionIds = new int[] {
                 R.id.back_btn,
                 R.id.division,
-                R.id.dot_btn,
                 R.id.minus,
                 R.id.equals,
                 R.id.multiply,
                 R.id.plus,
-                R.id.clear,
+                R.id.reset
         };
 
         text =findViewById(R.id.math_operation);
@@ -74,12 +74,19 @@ public class MainActivity extends AppCompatActivity {
         };
 
         for (int i = 0; i < numberIds.length; i++) {
-            findViewById(numberIds[i]).setOnClickListener(nunberButtonClickListener);
+            findViewById((int) numberIds[(int) i]).setOnClickListener(nunberButtonClickListener);
         }
 
         for (int i = 0; i < actionIds.length; i++) {
-            findViewById(actionIds[i]).setOnClickListener(actionButtonOnclickListener);
+            findViewById(actionIds[(int) i]).setOnClickListener(actionButtonOnclickListener);
         }
+        findViewById(R.id.reset).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                calculator.reset();
+                text.setText(calculator.getText());
+            }
+        });
 
 
     }

@@ -45,6 +45,7 @@ public class CalculatorModel {
                         inputStr.append("0");
                     }
                     break;
+
                 case R.id.btn_1:
                     inputStr.append("1");
                     break;
@@ -72,6 +73,8 @@ public class CalculatorModel {
                 case R.id.btn_9:
                     inputStr.append("9");
                     break;
+
+
             }
         }
 
@@ -139,8 +142,10 @@ public class CalculatorModel {
             case R.id.multiply:
                 return '*';
             case R.id.division:
-            default:
                 return '/';
+            default:
+                return ' ';
+
 
         }
     }
